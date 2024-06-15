@@ -1,5 +1,6 @@
 # Official Instant3D Codes
 ## This is the official implementation of our paper [Instant3D: Instant Text-to-3D Generation](https://arxiv.org/abs/2311.08403).
+## The project page is [here](https://ming1993li.github.io/Instant3DProj/).
 
 ## Building the required Conda environment by requirements.txt
 
