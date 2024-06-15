@@ -2,20 +2,20 @@
 ## This is the official implementation of our paper [Instant3D: Instant Text-to-3D Generation](https://arxiv.org/abs/2311.08403).
 ## The project page is [here](https://ming1993li.github.io/Instant3DProj/).
 
-## Building the required Conda environment by requirements.txt
+## 1. Building the required Conda environment by requirements.txt
 
-## Downloading the pre-trained ckpts
-### Our Instant3D network [weights](https://drive.google.com/file/d/1SXQco_5n0yQBeuEsLO5-KR-jJQ8v9gxF/view?usp=sharing) 
+## 2. Downloading the pre-trained ckpts
+### 2.1 Our Instant3D network [weights](https://drive.google.com/file/d/1SXQco_5n0yQBeuEsLO5-KR-jJQ8v9gxF/view?usp=sharing) 
 (revise args.py --evaluate accordingly)
-### Pretrained CLIP and Stable Diffusion weights (revise args.py ----pretrained_path)
-#### The CLIP weight for ViT-L/14
-#### downloading SD 2.1, sign in hugging face account through 
+### 2.2 Pretrained CLIP and Stable Diffusion weights (revise args.py ----pretrained_path)
+#### 2.2.1 The CLIP weight for ViT-L/14
+#### 2.2.2 downloading SD 2.1, sign in hugging face account through 
 `from huggingface_hub import login
 login('')`
 
-## Install tiny-cuda-nn 
+## 3. Install tiny-cuda-nn 
 
-## DDP running
+## 4. DDP running
 python -m torch.distributed.launch --nproc_per_node=1 --master_port=2349 ./main.py --batch-size 1 --random_seed 666 --gpu-ids 0
 
 ## Citation
